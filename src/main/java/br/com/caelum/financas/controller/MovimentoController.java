@@ -30,7 +30,7 @@ public class MovimentoController {
     @RequestMapping("/")
     public String lista(Model model) {
 
-        // model.addAttribute("tarefas", dao.lista());
+        model.addAttribute("movimentos", dao.lista());
         return "lista";
 
     }
