@@ -1,4 +1,4 @@
-Conversor Romano
+Controlador de finanças
 ================
 
 Álvaro Rumbane<br>
