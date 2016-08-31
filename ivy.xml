@@ -1,0 +1,32 @@
+<ivy-module version="2.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+	<info organisation="agiletickets" module="agiletickets" />
+
+	<configurations>
+		<conf name="default" description="dependencies used for compile" />
+		<conf name="provided" description="dependencies used for compile but is not packaged" visibility="public" />
+		<conf name="test" description="dependencies used for tests" visibility="public" />
+		<conf name="acceptance-test" description="dependencies used for acceptance tests" visibility="public" />
+	</configurations>
+
+	<dependencies>
+
+		<!-- Test dependencies -->
+		<dependency org="junit" name="junit" rev="4.8.2" conf="test->default" />
+		
+		<!-- Acceptance Test dependencies -->
+		<dependency org="org.seleniumhq.selenium" name="selenium-java" rev="2.53.1" conf="acceptance-test->default"/>
+		<dependency org="org.seleniumhq.selenium" name="selenium-firefox-driver" rev="2.53.1" conf="acceptance-test->default"/>
+		<dependency org="org.seleniumhq.selenium" name="selenium-server" rev="2.53.1" conf="acceptance-test->default"/>
+		
+		<!-- Spring -->
+		<dependency org="org.springframework" name="spring-webmvc" rev="4.3.2.RELEASE"/>
+
+		
+		<!-- DB -->		
+		<dependency org="commons-dbcp" name="commons-dbcp" rev="1.4" conf="default"/>		
+		<dependency org="mysql" name="mysql-connector-java" rev="6.0.3" conf="default"/>
+		
+	</dependencies>
+</ivy-module>
