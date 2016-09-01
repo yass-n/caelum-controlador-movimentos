@@ -11,6 +11,7 @@
 	</configurations>
 
 	<dependencies>
+		<dependency org="javax.servlet" name="jstl" rev="1.2" conf="default" />
 
 		<!-- Test dependencies -->
 		<dependency org="junit" name="junit" rev="4.8.2" conf="test->default" />
@@ -22,11 +23,15 @@
 		
 		<!-- Spring -->
 		<dependency org="org.springframework" name="spring-webmvc" rev="4.3.2.RELEASE" conf="default"/>
-
 		
 		<!-- DB -->		
 		<dependency org="commons-dbcp" name="commons-dbcp" rev="1.4" conf="default"/>		
 		<dependency org="mysql" name="mysql-connector-java" rev="6.0.3" conf="default"/>
+		
+		<!-- Provided dependencies -->
+		<dependency org="javax.servlet" name="javax.servlet-api" rev="3.1.0" conf="provided->default" />
+		<dependency org="javax.servlet.jsp" name="jsp-api" rev="2.2.1-b03" conf="provided->default" />
+		
 		
 	</dependencies>
 </ivy-module>
