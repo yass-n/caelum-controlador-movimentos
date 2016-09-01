@@ -5,6 +5,7 @@
 
 	<configurations>
 		<conf name="default" description="dependencies used for compile" />
+		<conf name="sources" description="dependencies source code" visibility="public" />
 		<conf name="provided" description="dependencies used for compile but is not packaged" visibility="public" />
 		<conf name="test" description="dependencies used for tests" visibility="public" />
 		<conf name="acceptance-test" description="dependencies used for acceptance tests" visibility="public" />
